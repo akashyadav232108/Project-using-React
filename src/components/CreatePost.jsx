@@ -2,7 +2,7 @@ import { useContext, useRef } from "react";
 import { PostList } from "../store/post-list-store";
 
 const CreatePost = () => {
- const {addPost} = useContext(PostList);
+  const { addPost } = useContext(PostList);
 
   const userIdElement = useRef();
   const postTitleElement = useRef();
@@ -25,7 +25,7 @@ const CreatePost = () => {
     tagsElement.current.value = "";
 
     addPost(userId, postTitle, postBody, reactions, tags);
-  }
+  };
 
   return (
     <form className="create-post" onSubmit={handleSubmit}>
@@ -96,6 +96,6 @@ const CreatePost = () => {
       </button>
     </form>
   );
-}
+};
 
 export default CreatePost;
